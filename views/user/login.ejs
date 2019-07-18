@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign in</title>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/contentlogin/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="shortcut icon" href="images/icons/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="images/icons/icon-144x144.png">
+    <!-- Main css -->
+    <link rel="stylesheet" href="/contentlogin/css/style.css">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+
+    <div class="main">
+<!-- Sing in  Form -->
+        <section class="sign-in">
+            <div class="container" style="margin-top:-150px">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="/contentlogin/images/signin-image.jpg" alt="sing up image"></figure>
+                    </div>
+                    <div class="signin-form">
+                        <h2 class="form-title">Sign in</h2>                                         
+                               <h4 ><%= messages %></h4>
+                        <form action="login" method="POST" class="register-form" id="login-form">
+                            <div class="form-group">
+                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="mssv" id="mssv" placeholder="MÃ SỐ SINH VIÊN CỦA BẠN" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="password" id="password" placeholder="Password" required/>
+                            </div>
+                            <div class="form-group form-button">
+                                <button type="submit" name="signin" class="form-submit">Đăng nhập</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    
+    <script src="/contentlogin/vendor/jquery/jquery.min.js"></script>
+    <script src="/Scripts/ulity.js"></script>
+    <script src="/Scripts/main.js"></script>
+   
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+
+

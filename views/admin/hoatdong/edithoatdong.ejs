@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sửa hoạt động</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/icons/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="/images/icons/icon-144x144.png">
+    <style type="text/css">
+        body {
+            color: #566787;
+            background: #f5f5f5;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .contact-form {
+            padding: 50px;
+            margin: 30px 0;
+        }
+
+        .contact-form h1 {
+            text-transform: uppercase;
+            margin: 0 0 15px;
+        }
+
+        .contact-form .form-control,
+        .contact-form .btn {
+            min-height: 38px;
+            border-radius: 2px;
+        }
+
+        .contact-form .btn-primary {
+            min-width: 150px;
+            background: #299be4;
+            border: none;
+        }
+
+        .contact-form .btn-primary:hover {
+            background: #1c8cd7;
+        }
+
+        .contact-form label {
+            opacity: 0.9;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .hint-text {
+            font-size: 15px;
+            padding-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .bs-example {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 m-auto">
+                <div class="contact-form">
+                    <h1>SỬA THÔNG TIN HOẠT ĐỘNG</h1>
+                    <p class="hint-text">Mời bạn nhập thông tin vào form bên dưới</p>
+                    <form action="/admin/hoatdong/capnhathoatdong/<%= Id %>" method="POST" enctype="multipart/form-data">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Tên Hoạt dộng</label>
+                                <input name="ten" type="text" class="form-control" value="<%= ten %>" placeholder="<%= ten %>">
+                            </div>
+                            <div class="form-group">
+                                <label>Nội dung</label>
+                                <textarea rows="10" cols="50" name="noiDung" type="text" class="form-control"
+                                    placeholder="<%= noiDung %>"><%= noiDung %></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>image</label>
+                                <input name="FileUploads" type="file" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                    <label>Số lượng</label>
+                                    <input name="soNguoiDK" type="number" class="form-control" value="<%= soNguoiDK %>"
+                                        placeholder="<%= soNguoiDK %>">
+                                </div>
+                            <div class="form-group">
+                                <label>TGDR</label>
+                                <input name="TGDR" type="date" class="form-control" value="<%= TGDR %>" placeholder="<%= TGDR %>">
+                            </div>
+                            <div class="form-group">
+                                <label>TGKT</label>
+                                <input name="TGKT" type="date" class="form-control" value="<%= TGKT %>" placeholder="<%= TGKT %>">
+                            </div>
+                        <div class="modal-footer">
+                                <a href="/admin/hoatdong" class="btn btn-info" data-dismiss="modal">Cancel</a>
+                                <input type="submit" class="btn btn-success" value="Add">
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

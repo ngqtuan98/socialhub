@@ -1,0 +1,50 @@
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    
+    caches.open('mycache').then(function(cache) {
+      return cache.addAll([
+
+      'http://localhost:3000/',
+      'contentlogin/css/style.css',
+      'contentlogin/fonts/material-icon/css/material-design-iconic-font.min.css',
+      'images/icons/icon-72x72.png',
+      'contentlogin/vendor/jquery/jquery.min.js',
+      
+      'http://localhost:3000/profile',
+      'contentsinhvien/css/plugin.css',
+      'contentsinhvien/css/style.css',
+      'https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700',
+      'images/icons/icon-512x512.png',
+      'contentsinhvien/js/jquery.min.js',
+      'contentsinhvien/js/plugin.js',
+      'contentsinhvien/js/scripts.js',
+      
+     
+
+      ]);
+    })
+  );
+});
+
+/* In sw.js */
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+   return Promise.reject(); // Failure
+  );
+});
+
+self.addEventListener('activate', function (e) {
+  console.log('[Service Worker] Activate');
+  e.waitUntil(
+    caches.keys().then(function (keyList) {
+      return Promise.all(
+        keyList.map(function (key) {
+          if (key != cacheName) {
+            console.log('Removing old cache', key);
+            return caches.delete(key);
+          }
+        })
+      );
+    })
+  );
+});

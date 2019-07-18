@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Simple Contact Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/icons/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="/images/icons/icon-144x144.png">
+    <style type="text/css">
+        body {
+            color: #566787;
+            background: #f5f5f5;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .contact-form {
+            padding: 50px;
+            margin: 30px 0;
+        }
+
+        .contact-form h1 {
+            text-transform: uppercase;
+            margin: 0 0 15px;
+        }
+
+        .contact-form .form-control,
+        .contact-form .btn {
+            min-height: 38px;
+            border-radius: 2px;
+        }
+
+        .contact-form .btn-primary {
+            min-width: 150px;
+            background: #299be4;
+            border: none;
+        }
+
+        .contact-form .btn-primary:hover {
+            background: #1c8cd7;
+        }
+
+        .contact-form label {
+            opacity: 0.9;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .hint-text {
+            font-size: 15px;
+            padding-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .bs-example {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 m-auto">
+                <div class="contact-form">
+                    <h1>SỬA THÔNG TIN</h1>
+                    <p class="hint-text">Mời bạn nhập thông tin vào form bên dưới</p>
+                    <form action="/admin/sinhvien/capnhatsinhvien/<%= maSV %>" method="POST">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Họ và tên</label>
+                                <input name="name" type="text" class="form-control" value="<%= ten %>"
+                                    placeholder="<%= ten %>">
+                            </div>
+                            <div class="form-group">
+                                <label>Ngày sinh</label>
+                                <input name="ngaysinh" type="date" class="form-control"
+                                    value="<%= ngaysinh %>" placeholder="<%= ngaysinh %>">
+                            </div>
+                            <div class="form-group">
+                                <label>Nơi sinh</label>
+                                <input name="noisinh" type="text" class="form-control" value="<%= noisinh %>"
+                                    placeholder="<%= noisinh %>">
+                            </div>
+                            <div class="form-group">
+                                <label>SDT</label>
+                                <input name="sdt" type="number" class="form-control" value="<%= sdt %>"
+                                    placeholder="<%= sdt %>">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input name="email" type="email" class="form-control" value="<%= email %>"
+                                    placeholder="<%= email %>">
+                            </div>
+                            <% if(vaodoan==0){ %>
+                            <div class="form-group">
+                                <label>Vào đoàn</label>
+                                <select id="subject" class="form-group form-control" name="selectpicker" required>
+                                    <option value="" selected disabled>CHUYỂN SINH HOẠT ĐOÀN</option>
+                                    <option name="select" value="1">ĐƯỢC VÀO ĐOÀN</option>
+                                    <option name="select" value="0">CHƯA ĐƯỢC VÀO ĐOÀN</option>
+                                </select>
+                            </div>
+                            <% } %>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>Xác nhận
+                                    thông tin</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                                <a href="/admin/sinhvien" class="btn btn-info" data-dismiss="modal">Cancel</a>
+                                <input type="submit" class="btn btn-success" value="Add">
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Trang chủ</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
+	<link rel="stylesheet" href="/contentindex/css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="/contentindex/css/animate.css">
+	<link rel="stylesheet" href="/contentindex/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/contentindex/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="/contentindex/css/magnific-popup.css">
+	<link rel="stylesheet" href="/contentindex/css/aos.css">
+	<link rel="stylesheet" href="/contentindex/css/ionicons.min.css">
+	<link rel="stylesheet" href="/contentindex/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="/contentindex/css/jquery.timepicker.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link rel="stylesheet" href="/contentindex/css/flaticon.css">
+	<link rel="stylesheet" href="/contentindex/css/icomoon.css">
+	<link rel="stylesheet" href="/contentindex/css/style.css">
+	<link rel="manifest" href="/manifest.json" />
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script>
+		var OneSignal = window.OneSignal || [];
+		OneSignal.push(function () {
+			OneSignal.init({
+				appId: "7792e6e9-320e-42c2-94cf-8c41b8e0e1ea",
+			});
+		});
+	</script>
+</head>
+<body>
+	<nav class="navbar navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container d-flex align-items-stretch">
+			<div class="col-3 d-flex align-items-center">
+				<a class="navbar-brand" href="/trangchu">HUFLIT<span>MediaGroup</span></a>
+			</div>
+			<div class="col-9 d-flex align-items-center text-right">
+				<ul class="ftco-social mt-2 mr-3">
+					<li class="ftco-animate"><a href="https://www.facebook.com/HUFLITmediagroup/"><span
+								class="icon-facebook"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.youtube.com/user/HUFLITMediaGroup"><span
+								class="icon-youtube"></span></a></li>
+				</ul>
+
+				<button class="navbar-toggler d-flex align-items-center" type="button" data-toggle="collapse"
+					data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="pt-1 mr-1">Menu</span> <span class="oi oi-menu"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a href="/hoatdong" class="nav-link">Hoạt dộng</a></li>
+					<li class="nav-item"><a href="/profile" class="nav-link">Profile</a></li>
+					<li class="nav-item"><a href="/" class="nav-link">Log out</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- END nav -->
+
+	<div class="hero-wrap js-fullheight" style="background-image: url('/uploads/imageBG.jpg');"
+		data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
+				data-scrollax-parent="true">
+				<div class="col-md-10 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+					<h1 class="mb-0">Welcome To HMG</h1>
+					<h3 class="subheading mb-4 pb-1">Chúc bạn một ngày vui vẽ :))</h3>
+					<div class="mouse">
+						<a class="mouse-icon">
+							<div class="mouse-wheel"><span class="ion-ios-arrow-down"></span></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="ftco-intro py-5" style="background-image: url('<%= image %>');">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row d-flex align-items-center">
+				<div class="col-md-6 ftco-animate">
+					<h2 class="subheading"><span class="icon-calendar"></span> Upcoming Events</h2>
+					<h2><a>"<%= tenHD %>"</a></h2>
+				</div>
+				<div class="col-md-6 pl-md-5 ftco-animate">
+					<div id="timer" class="d-flex mb-3">
+						<h5 class="mb-0" style="color: rgb(255, 255, 255); font-family:sans-serif">Thời gian diễn ra:
+							<%= TGDR %> -
+							<%= TGKT %> </h5>
+					</div>
+					<% if(soNguoiDK > 0){ %>
+					<p><a href="chitiethoatdong/<%= Id %>" class="btn btn-primary px-4 py-2">Đăng ký ngay</a></p>
+					<% }
+								%>
+					<% if(soNguoiDK <= 0){ %>
+					<p><a href="#" class="btn btn-primary px-4 py-2">Đã hết</a></p>
+					<% }
+								 %>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END nav -->
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-12 text-center heading-section ftco-animate">
+					<h2 class="mb-2"><span class="px-4">Bạn cần gì ?</span></h2>
+					<span class="subheading">Nhấp vào biểu tượng bên dưới</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="d-flex services ftco-animate text-lg-right">
+
+						<div class="icon order-lg-last d-flex align-items-center justify-content-center"><a
+								href="hoatdong"><span class="fas fa-skating"></span></a></div>
+						<div class="media-body pr-lg-5">
+							<h3 class="heading mb-3">Hoạt động</h3>
+							<p>Nhựng hoạt động sắp diễn ra.</p>
+						</div>
+					</div>
+					<div class="d-flex services ftco-animate text-lg-right">
+						<div class="icon order-lg-last d-flex align-items-center justify-content-center"><a
+								href="profile"><span class="fas fa-info"></span></a></div>
+						<div class="media-body pr-lg-5">
+							<h3 class="heading mb-3">Thông tin của tôi</h3>
+							<p>Bạn có thể xem và quản lý thông tin, hoạt động Đoàn - Hội và các tùy chọn khác. </p>
+						</div>
+					</div>
+					<div class="d-flex services ftco-animate text-lg-right">
+						<div class="icon order-lg-last d-flex align-items-center justify-content-center">
+							<%if(thongBao.length == 0 ){ %>
+							<span class="fas fa-bell"></span>
+							<% }
+								 %>
+							<%if(thongBao.length > 0 ){ %>
+							<a href="/xacnhan/<%= idThongBao %>"><span style="color: tomato" class="fas fa-bell">
+									<p style="font-size: 10px;text-align: center;">Xác nhận</p>
+								</span></a>
+							<% }
+							 %>
+						</div>
+						<%if(thongBao.length == 1 ){ %>
+						<div class="media-body pr-lg-5">
+							<h3 class="heading mb-3">Bạn có <a style="color: tomato"><%= thongBao.length %></a> Thông
+								báo</h3>
+							<p><%= tenThongBao %></p>
+							<p><%= noiDung %></p>
+							<% }
+								 %>
+							<%if(thongBao.length == 0 ){ %>
+							<div class="media-body pr-lg-5">
+								<h3 class="heading mb-3">Bạn không có Thông báo nào</h3>
+								<p>Bạn sẽ nhận thông báo tại đây khi có thông báo</p>
+								<% }
+								 %>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6">
+						<div class="d-flex services ftco-animate text-lg-left">
+							<div class="icon d-flex align-items-center justify-content-center"><a href="contact"><span
+										class="flaticon-social-care"></span></a></div>
+							<div class="media-body pl-lg-5">
+								<h3 class="heading mb-3">Trợ giúp</h3>
+								<p>Bạn có những thắc mắc về các vấn đề liên quan đến việc học tập, hoạt động Đoàn - Hội.
+								</p>
+							</div>
+						</div>
+						<div class="d-flex services ftco-animate text-lg-left">
+
+							<div class="icon d-flex align-items-center justify-content-center"> <a
+									href="kenhthongtin"><span class="flaticon-promotion"></span></a></div>
+							<div class="media-body pl-lg-5">
+								<h3 class="heading mb-3">Kênh thông tin HUFLIT</h3>
+								<p>Kênh thông tin dành cho Sinh viên HUFLIT.</p>
+							</div>
+						</div>
+						<div class="d-flex services ftco-animate text-lg-left">
+							<div class="icon d-flex align-items-center justify-content-center"><a
+									href="hoatdong/hoatdongdangky"><span class="far fa-calendar-check"></span></a></div>
+							<div class="media-body pl-lg-5">
+								<h3 class="heading mb-3">Hoạt động đã đăng ký</h3>
+								<p>Hiện tại bạn đã đăng ký <a style="color: lightcoral"><%= results.length %></a> hoạt
+									động</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+	<footer class="ftco-footer ftco-bg-dark ftco-section">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2"><a href="/Trangchu">Home</a></h2>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4 ml-md-5">
+						<h2 class="ftco-heading-2"><a href="/Hoatdong">Hoạt động</a></h2>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4 ml-md-5">
+						<h2 class="ftco-heading-2"><a href="/Profile">Profile</a></h2>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2"><a href="/">Log out</a></h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" /></svg></div>
+
+	<script src="/Scripts/OneSignalSDKUpdaterWorker.js"></script>
+	<script src="/contentindex/js/jquery.min.js"></script>
+	<script src="/contentindex/js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="/contentindex/js/popper.min.js"></script>
+	<script src="/contentindex/js/bootstrap.min.js"></script>
+	<script src="/contentindex/js/jquery.easing.1.3.js"></script>
+	<script src="/contentindex/js/jquery.waypoints.min.js"></script>
+	<script src="/contentindex/js/jquery.stellar.min.js"></script>
+	<script src="/contentindex/js/owl.carousel.min.js"></script>
+	<script src="/contentindex/js/jquery.magnific-popup.min.js"></script>
+	<script src="/contentindex/js/aos.js"></script>
+	<script src="/contentindex/js/jquery.animateNumber.min.js"></script>
+	<script src="/contentindex/js/scrollax.min.js"></script>
+	<script src="/contentindex/js/google-map.js"></script>
+	<script src="/contentindex/js/main.js"></script>
+</body>
+
+</html>
